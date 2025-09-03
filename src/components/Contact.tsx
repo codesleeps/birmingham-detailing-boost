@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
   return (
-    <section className="py-20 px-4">
+    <section id="contact" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -60,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 gradient-accent rounded-full" />
-                    <span>✉️ info@birminghamdetailing.co.uk</span>
+                    <span>✉️ info@palmersdetailing.co.uk</span>
                   </div>
                 </div>
               </CardContent>

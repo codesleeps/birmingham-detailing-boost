@@ -1,3 +1,8 @@
+import mercedesBefore from "@/assets/mercedes-before.jpg";
+import mercedesAfter from "@/assets/mercedes-after.jpg";
+import audiBefore from "@/assets/audi-before.jpg";
+import audiAfter from "@/assets/audi-after.jpg";
+
 const Gallery = () => {
   const beforeAfterImages = [
     {
@@ -6,19 +11,19 @@ const Gallery = () => {
       description: "BMW Interior Restoration"
     },
     {
-      before: "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&h=300&fit=crop",
-      after: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop", 
+      before: mercedesBefore,
+      after: mercedesAfter,
       description: "Mercedes Exterior Polish"
     },
     {
-      before: "https://images.unsplash.com/photo-1549399137-426d05d4c7a7?w=400&h=300&fit=crop",
-      after: "https://images.unsplash.com/photo-1606016838648-1dbff4b88fc6?w=400&h=300&fit=crop",
+      before: audiBefore,
+      after: audiAfter,
       description: "Audi Paint Correction"
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section id="gallery" className="py-20 px-4 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

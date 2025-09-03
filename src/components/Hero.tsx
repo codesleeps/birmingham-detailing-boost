@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-detailing.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -16,9 +16,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Premium Vehicle
-          <span className="block gradient-accent bg-clip-text text-transparent">
-            Detailing Services
+          <span className="gradient-accent bg-clip-text text-transparent">
+            Palmers
+          </span>
+          <span className="block text-4xl md:text-6xl mt-2">
+            Vehicle Detailing
           </span>
         </h1>
         
@@ -29,7 +31,7 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button variant="premium" size="lg" className="text-lg px-8 py-4">
-            Book Your Detail
+            Request Quote
           </Button>
           <Button variant="hero" size="lg" className="text-lg px-8 py-4">
             View Services
