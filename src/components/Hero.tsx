@@ -20,7 +20,7 @@ const Hero = () => {
             Palmers
           </span>
           <span className="block text-4xl md:text-6xl mt-2">
-            Vehicle Detailing
+            Premium Vehicle Detailing
           </span>
         </h1>
         
