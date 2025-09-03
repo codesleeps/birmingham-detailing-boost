@@ -49,7 +49,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`relative transition-premium hover:shadow-premium ${
+              className={`relative transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 service.popular ? 'ring-2 ring-accent shadow-glow' : ''
               }`}
             >
@@ -84,6 +84,7 @@ const Services = () => {
                 <Button 
                   variant={service.popular ? "premium" : "default"} 
                   className="w-full"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Request Quote
                 </Button>
