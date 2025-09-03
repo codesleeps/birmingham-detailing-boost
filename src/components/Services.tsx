@@ -49,8 +49,8 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`relative transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                service.popular ? 'ring-2 ring-accent shadow-glow' : ''
+              className={`relative transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105 ${
+                service.popular ? 'ring-2 ring-primary/50 shadow-lg shadow-primary/20' : 'hover:shadow-primary/10'
               }`}
             >
               {service.popular && (

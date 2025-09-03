@@ -37,7 +37,7 @@ const Gallery = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {beforeAfterImages.map((item, index) => (
             <div key={index} className="group">
-              <div className="gradient-card rounded-xl p-6 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105 hover:bg-card/90">
                 <h3 className="text-xl font-semibold mb-4 text-center">{item.description}</h3>
                 
                 <div className="grid grid-cols-2 gap-4 mb-4">
