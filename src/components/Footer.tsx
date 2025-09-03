@@ -61,8 +61,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>📍 Birmingham, West Midlands</p>
-              <p>📞 +44 (0) 121 XXX XXXX</p>
-              <p>✉️ info@palmersdetailing.co.uk</p>
+              <p>📞 +44 7554971672</p>
+              <p>✉️ info@palmerspremiumdetailing.co.uk</p>
               <div className="pt-2">
                 <p className="font-medium text-foreground">Mon-Fri: 8AM-6PM</p>
                 <p>Sat: 9AM-4PM • Sun: Closed</p>
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © 2024 Palmers Vehicle Detailing. All rights reserved.
+              © 2025 Palmers Premium Vehicle Detailing. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <button className="text-sm text-muted-foreground hover:text-primary transition-colors">
