@@ -7,7 +7,7 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
@@ -22,40 +22,40 @@ const Navigation = () => {
               Palmers
             </h1>
             <span className="ml-2 text-sm text-muted-foreground hidden sm:inline">
-              Vehicle Detailing
+              Premium Vehicle Detailing
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')}
+            <button
+              onClick={() => scrollToSection("hero")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Home
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
+            <button
+              onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('gallery')}
+            <button
+              onClick={() => scrollToSection("gallery")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Gallery
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <button
+              onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Contact
             </button>
-            <Button 
-              variant="premium" 
+            <Button
+              variant="premium"
               size="sm"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
             >
               Request Quote
             </Button>
@@ -68,9 +68,21 @@ const Navigation = () => {
             aria-label="Toggle menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-              <span className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-              <span className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+              <span
+                className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+                  isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                }`}
+              ></span>
+              <span
+                className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`bg-foreground block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+                  isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+                }`}
+              ></span>
             </div>
           </button>
         </div>
@@ -79,35 +91,35 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <button 
-                onClick={() => scrollToSection('hero')}
+              <button
+                onClick={() => scrollToSection("hero")}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Home
               </button>
-              <button 
-                onClick={() => scrollToSection('services')}
+              <button
+                onClick={() => scrollToSection("services")}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Services
               </button>
-              <button 
-                onClick={() => scrollToSection('gallery')}
+              <button
+                onClick={() => scrollToSection("gallery")}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Gallery
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+              <button
+                onClick={() => scrollToSection("contact")}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Contact
               </button>
-              <Button 
-                variant="premium" 
-                size="sm" 
+              <Button
+                variant="premium"
+                size="sm"
                 className="w-fit"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection("contact")}
               >
                 Request Quote
               </Button>
