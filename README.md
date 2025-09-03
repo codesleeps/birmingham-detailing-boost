@@ -1,42 +1,34 @@
-# Welcome to your Lovable project
+# Palmers Premium Detailing
+
+A professional car detailing website built with modern web technologies.
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/ec402fc8-87e2-4994-9957-3ee325b36792
+This is a React-based website for Palmers Premium Detailing services in Birmingham.
 
-## How can I edit this code?
+## How to run locally
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/ec402fc8-87e2-4994-9957-3ee325b36792) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To work locally using your preferred IDE:
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd birmingham-detailing-boost
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install the necessary dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Edit files directly in GitHub**
 
 - Navigate to the desired file(s).
 - Click the "Edit" button (pencil icon) at the top right of the file view.
@@ -50,7 +42,7 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+## Technologies used
 
 This project is built with:
 
@@ -59,15 +51,32 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- React Router
+- React Hook Form
+- Lucide React (icons)
 
-## How can I deploy this project?
+## How to deploy
 
-Simply open [Lovable](https://lovable.dev/projects/ec402fc8-87e2-4994-9957-3ee325b36792) and click on Share -> Publish.
+This project is configured for GitHub Pages deployment:
 
-## Can I connect a custom domain to my Lovable project?
+1. Push changes to the main branch
+2. GitHub Actions will automatically build and deploy
+3. Site will be available at: https://codesleeps.github.io/birmingham-detailing-boost/
 
-Yes, you can!
+### Manual deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can also deploy manually:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```sh
+npm run build
+npm run deploy
+```
+
+## Custom domain
+
+To use a custom domain with GitHub Pages:
+
+1. Go to your repository Settings
+2. Navigate to Pages section
+3. Add your custom domain
+4. Configure DNS settings as per GitHub's instructions
