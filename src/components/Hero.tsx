@@ -20,7 +20,7 @@ const Hero = () => {
             Palmers
           </span>
           <span className="block text-4xl md:text-6xl mt-2">
-            Premium Vehicle Detailing
+            Premium OCDetailing
           </span>
         </h1>
         
@@ -51,11 +51,11 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20">
           <div>
-            <div className="text-3xl md:text-4xl font-bold gradient-accent bg-clip-text text-transparent">500+</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-accent bg-clip-text text-transparent">900+</div>
             <div className="text-white/80">Happy Customers</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold gradient-accent bg-clip-text text-transparent">5 Years</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-accent bg-clip-text text-transparent">8 Years</div>
             <div className="text-white/80">Experience</div>
           </div>
           <div>

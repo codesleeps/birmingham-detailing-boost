@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
+import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 
 // Load environment variables
@@ -10,12 +11,14 @@ dotenv.config();
 // Import routes
 import authRoutes from "./routes/auth";
 import userRoutes from "./routes/users";
+import competitorRoutes from "./routes/competitors";
 
 const app: Express = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(helmet()); // Security headers
+app.use(cookieParser()); // Parse cookies
 app.use(
   cors({
     origin:
@@ -42,6 +45,7 @@ app.get("/health", (req: Request, res: Response) => {
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/competitors", competitorRoutes);
 
 // 404 Handler
 app.all("*", (req: Request, res: Response) => {

@@ -22,7 +22,7 @@ const Navigation = () => {
               Palmers
             </h1>
             <span className="ml-2 text-sm text-muted-foreground hidden sm:inline">
-              Premium Vehicle Detailing
+              Premium OCDetailing
             </span>
           </div>
 

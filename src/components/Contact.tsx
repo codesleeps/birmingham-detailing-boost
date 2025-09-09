@@ -56,11 +56,11 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 gradient-accent rounded-full" />
-                    <span>📞 +44 (0) 121 XXX XXXX</span>
+                    <span>📞 +44 7554971672</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 gradient-accent rounded-full" />
-                    <span>✉️ info@palmersdetailing.co.uk</span>
+                    <span>✉️ info@palmersocdetailing.co.uk</span>
                   </div>
                 </div>
               </CardContent>

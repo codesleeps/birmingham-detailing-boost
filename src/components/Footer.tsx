@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold gradient-accent bg-clip-text text-transparent mb-4">
-              Palmers Vehicle Detailing
+              Palmers OCDetailing
             </h3>
             <p className="text-muted-foreground mb-4 max-w-md">
               Professional vehicle detailing services in Birmingham, West Midlands. 
@@ -62,7 +62,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>📍 Birmingham, West Midlands</p>
               <p>📞 +44 7554971672</p>
-              <p>✉️ info@palmerspremiumdetailing.co.uk</p>
+              <p>✉️ info@palmersocdetailing.co.uk</p>
               <div className="pt-2">
                 <p className="font-medium text-foreground">Mon-Fri: 8AM-6PM</p>
                 <p>Sat: 9AM-4PM • Sun: Closed</p>
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © 2025 Palmers Premium Vehicle Detailing. All rights reserved.
+              © 2025 Palmers OCDetailing. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <button className="text-sm text-muted-foreground hover:text-primary transition-colors">

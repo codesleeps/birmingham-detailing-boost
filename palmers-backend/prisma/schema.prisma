@@ -1,0 +1,182 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  firstName String
+  lastName  String
+  phone     String?
+  role      UserRole @default(CUSTOMER)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  bookings     Booking[]
+  reviews      Review[]
+  preferences  UserPreference?
+  notifications Notification[]
+
+  @@map("users")
+}
+
+model UserPreference {
+  id              String @id @default(cuid())
+  userId          String @unique
+  emailMarketing  Boolean @default(true)
+  smsNotifications Boolean @default(true)
+  appointmentReminders Boolean @default(true)
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("user_preferences")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Decimal  @db.Decimal(10, 2)
+  duration    Int      // in minutes
+  category    ServiceCategory
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  bookings    Booking[]
+  reviews     Review[]
+
+  @@map("services")
+}
+
+model Booking {
+  id          String        @id @default(cuid())
+  userId      String
+  serviceId   String
+  scheduledAt DateTime
+  status      BookingStatus @default(PENDING)
+  notes       String?
+  totalAmount Decimal       @db.Decimal(10, 2)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  user    User    @relation(fields: [userId], references: [id])
+  service Service @relation(fields: [serviceId], references: [id])
+  review  Review?
+
+  @@map("bookings")
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  userId    String
+  serviceId String
+  bookingId String   @unique
+  rating    Int      // 1-5 stars
+  comment   String?
+  isPublic  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user    User    @relation(fields: [userId], references: [id])
+  service Service @relation(fields: [serviceId], references: [id])
+  booking Booking @relation(fields: [bookingId], references: [id])
+
+  @@map("reviews")
+}
+
+model Competitor {
+  id          String   @id @default(cuid())
+  name        String
+  website     String?
+  location    String
+  services    String[] // Array of service names
+  priceRange  String?  // e.g., "£50-£100"
+  rating      Decimal? @db.Decimal(2, 1)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  monitoring CompetitorMonitoring[]
+
+  @@map("competitors")
+}
+
+model CompetitorMonitoring {
+  id           String   @id @default(cuid())
+  competitorId String
+  checkDate    DateTime @default(now())
+  priceChanges String?  // JSON string of price changes
+  newServices  String?  // JSON string of new services
+  rating       Decimal? @db.Decimal(2, 1)
+  notes        String?
+
+  // Relations
+  competitor Competitor @relation(fields: [competitorId], references: [id])
+
+  @@map("competitor_monitoring")
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  title     String
+  message   String
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("notifications")
+}
+
+// Enums
+enum UserRole {
+  CUSTOMER
+  ADMIN
+  STAFF
+}
+
+enum ServiceCategory {
+  EXTERIOR_WASH
+  INTERIOR_CLEAN
+  FULL_DETAIL
+  PAINT_PROTECTION
+  CERAMIC_COATING
+  MOBILE_SERVICE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum NotificationType {
+  BOOKING_CONFIRMATION
+  BOOKING_REMINDER
+  BOOKING_COMPLETED
+  REVIEW_REQUEST
+  PROMOTIONAL
+  SYSTEM
+}
